@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap" rel="stylesheet"> -->
+</head>
+<body>
+    <header>
+        <img src="ProfileUser.png" alt="profile">
+    <div style="width: fit-content;">
+        <h1>Profile User</h1><br>
+        <p>ลงทะเบียน/แก้ไขข้อมูล</p>
+    </div>
+    </header>
+    <main>
+        <section class="profile-info">
+            <div class="profile-details">
+                <div class="profile1">
+                <h4 for="name">ชื่อ (Name) <font style="color: red;">*</font></h4>
+                <input type="text" name="name" id="name" placeholder="ระบุชื่อเป็นภาษาไทย" required>
+                </div>
+
+                <div class="profile2">
+                    <h4 for="last_name">นามสกุล (Last Name)<font style="color: red;">*</font> </h4>
+                    <input type="text" name="last_name" id="last_name" placeholder="ระบุนามสกุลเป็นภาษาไทย" required>
+                </div>  
+                <!-- <form method="post" action="Save.php" name="webform">
+                    <div class="profile3" id="rank">
+                    <h4>ยศ (Rank)</h4>
+                        <select class="rank" name="rank" id="rank">
+                            <option value="-">กรุณาเลือก</option>
+                            <option value="1">พระเจ้า</option>
+                            <option value="2">จอมมาร</option>
+                            <option value="3">ลูฟี่</option>
+                        </select>
+                    </div>  
+                </form> -->
+                <div class="profile4" id="battle_name">
+                    <h4>ชื่อที่แสดง (Battle Name)<font style="color: red;">*</font></h4>
+                    <input type="text" name="battle_name" id="name_battle" placeholder="ระบุชื่อที่แสดงบน Chatbot" required>
+                    <button type="button" class="button-btn" id="btn" onclick="handleRandomClick()">
+                        <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" style="color: black;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2z"/>
+                                <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466"/>
+                            </svg>
+                        </a>
+                    </button>
+                </div>  
+            </div>
+            <div id="message"></div>
+        </section>
+        <section class="terms">
+            <form action="page.cgi" method="post" name="form1">
+                <input name="terms" type="checkbox" id="chk1" value="Y">
+                <label for="terms">ข้าพเจ้าได้อ่านและรับทราบนโยบายการคุ้มครองข้อมูลส่วนบุคคล </label>
+                <label id="textdeconnection" style="color:blue;"><u> สวทช.</u></label>
+                <label for="terms">และยินยอมให้เก็บรวบรวม ใช้ หรือเปิดเผยข้อมูลส่วนบุคคลของข้าพเจ้า เพื่อลงทะเบียนเข้าใช้งาน Chatbot Ask Theta</label>
+            </form>
+        </section>
+        <button type="submit" id="submit-btn"><b>บันทึก</b></button>
+
+        <dialog id="popup-box">
+            <p style="text-align: center"></p>
+            <button id="closedialog-btn" onclick="hidePopup()">Close</button>
+        </dialog>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
